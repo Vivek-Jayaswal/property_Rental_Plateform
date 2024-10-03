@@ -1,0 +1,521 @@
+@import "../App.scss";
+
+
+.details-card-container {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    padding: 20px;
+}
+
+.details-card {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    @include flexItem(space-between, null, 20px, column);
+}
+
+
+.property-all-info {
+    box-sizing: border-box;
+    border: 1px solid rgb(52, 125, 177);
+    border-radius: 10px;
+    padding: 10px;
+    flex: 0 0 auto;
+    @include flexItem(space-between, null, 20px, column);
+
+    .property-price {
+        p {
+            color: #31302f;
+            font-weight: 800;
+        }
+    }
+
+    .title {
+        @include flexItem(flex-start, null, 20px, null);
+        color: #687279;
+    }
+
+    .property-middle-info {
+        width: 100%;
+        @include flexItem(space-between, null, 20px, null);
+
+        .image {
+            width: 400px;
+            height: 250px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                object-fit: cover;
+            }
+        }
+
+
+        .property-details {
+            width: calc(100% - 300px);
+            @include flexItem(space-between, null, 20px, column);
+
+            .first-layer {
+                @include flexItem(space-between, null, 20px, null);
+                background-color: rgb(193, 193, 193);
+                padding: 10px;
+                border-radius: 5px;
+
+                div {
+                    @include flexItem(space-between, center, 5px, null);
+
+                    .logo {
+                        color: #606060;
+                    }
+
+                    :nth-child(2) {
+                        color: #383939;
+                    }
+                }
+            }
+
+            .second-layer {
+                @include flexItem(space-between, null, 20px, null);
+
+                div {
+                    width: 33%;
+                    text-align: start;
+
+                    :nth-child(1) {
+                        color: #717274;
+                        font-weight: 300;
+                    }
+
+                    :nth-child(2) {
+                        color: #303134;
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            .third-layer {
+                @include flexItem(space-between, null, 20px, null);
+
+                div {
+                    width: 33%;
+                    text-align: start;
+
+                    :nth-child(1) {
+                        color: #717274;
+                        font-weight: 300;
+                    }
+
+                    :nth-child(2) {
+                        color: #303134;
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            .fourth-layer {
+                @include flexItem(space-between, null, 20px, null);
+
+                div {
+                    width: 33%;
+                    text-align: start;
+
+                    :nth-child(1) {
+                        color: #717274;
+                        font-weight: 300;
+                    }
+
+                    :nth-child(2) {
+                        color: #303134;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+    .property-third-middle-info {
+        @include flexItem(flex-start, center, 20px, null);
+        border-bottom: 1px solid gray;
+        padding-bottom: 10px;
+        font-weight: 100;
+        color: #71767c;
+    }
+
+    .property-bottom-info {
+        padding: 5px;
+        width: 100%;
+        @include flexItem(flex-end, null, null, null);
+
+        button {
+            border: none;
+            background-color: #ff0808;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all .5s ease-out 0s;
+
+            &:hover {
+                box-shadow: 0px 0px 15px gray;
+            }
+        }
+    }
+}
+
+
+.property-more-details {
+    border: 1px solid rgb(52, 125, 177);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 16px rgb(228, 228, 228);
+    box-sizing: border-box;
+
+    .details {
+        @include flexItem(space-between, null, 20px, column);
+
+        .more-details {
+            @include flexItem(flex-start, center, 20px, null);
+
+            :nth-child(1) {
+                width: 20%;
+                color: #4a525d;
+                font-weight: 300;
+            }
+
+            :nth-child(2) {
+                width: 80%;
+                color: #30302f;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    .details-card {
+        width: 100%;
+    }
+
+    .property-all-info {
+        width: 100%;    
+        @include flexItem(space-between, null, 10px, column);
+        .property-middle-info {
+            width: 100%;
+            @include flexItem(space-between, null, 20px,column);
+            .image {
+                width: 100%;
+                height: 250px;
+            }
+            .property-details {
+                width: 100%; 
+                @include flexItem(space-between, null, 10px, column);
+                .second-layer {
+                    @include flexItem(space-between, null, 20px, null);
+                    div {
+                        :nth-child(1) {
+                            font-size: 14px;
+                        }
+    
+                        :nth-child(2) {
+                            font-size: 14px
+                        }
+                    }
+                }
+    
+                .third-layer {
+                    @include flexItem(space-between, null, 20px, null);
+    
+                    div {
+                        :nth-child(1) {
+                            font-size: 14px
+                        }
+    
+                        :nth-child(2) {
+                            font-size: 14px
+                        }
+                    }
+                }
+    
+                .fourth-layer {
+                    @include flexItem(space-between, null, 20px, null);
+    
+                    div {
+                        :nth-child(1) {
+                            font-size: 14px
+                        }
+    
+                        :nth-child(2) {
+                            font-size: 14px
+                        }
+                    }
+                }
+            }
+        }
+    
+        .property-third-middle-info {
+            font-size: 14px;
+        }
+    }
+    
+    
+    .property-more-details {    
+        .details {
+            .more-details {
+                :nth-child(1) {
+                    width: 30%;
+                }
+    
+                :nth-child(2) {
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px){
+    .details-card {
+        width: 100%;
+    }
+
+    .property-all-info {
+        width: 100%;  
+        @include flexItem(space-between, null, 10px, column);
+        .property-middle-info {
+            width: 100%;
+            @include flexItem(space-between, null, 20px,column);
+            .image {
+                width: 100%;
+                height: 250px;
+            }
+            .property-details {
+                width: 100%; 
+                @include flexItem(space-between, null, 10px, column);
+                .second-layer {
+                    @include flexItem(space-between, null, 20px, null);
+                    div {
+                        :nth-child(1) {
+                            font-size: 14px;
+                        }
+    
+                        :nth-child(2) {
+                            font-size: 14px
+                        }
+                    }
+                }
+    
+                .third-layer {
+                    @include flexItem(space-between, null, 20px, null);
+    
+                    div {
+                        :nth-child(1) {
+                            font-size: 14px
+                        }
+    
+                        :nth-child(2) {
+                            font-size: 14px
+                        }
+                    }
+                }
+    
+                .fourth-layer {
+                    @include flexItem(space-between, null, 20px, null);
+    
+                    div {
+                        :nth-child(1) {
+                            font-size: 14px
+                        }
+    
+                        :nth-child(2) {
+                            font-size: 14px
+                        }
+                    }
+                }
+            }
+        }
+    
+        .property-third-middle-info {
+            font-size: 14px;
+        }
+    }
+    
+    
+    .property-more-details {    
+        .details {
+            .more-details {
+                :nth-child(1) {
+                    width: 30%;
+                }
+    
+                :nth-child(2) {
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+    .details-card {
+        width: 100%;
+    }
+
+    .property-all-info {
+        width: 100%;  
+        @include flexItem(space-between, null, 10px, column);
+        .property-middle-info {
+            width: 100%;
+            @include flexItem(space-between, null, 20px,null);
+            .image {
+                width: 100%;
+                height: 250px;
+            }
+            .property-details {
+                width: 100%; 
+                .second-layer {
+                    @include flexItem(space-between, null, 20px, null);
+                    div {
+                        :nth-child(1) {
+                            font-size: 14px;
+                        }
+    
+                        :nth-child(2) {
+                            font-size: 14px
+                        }
+                    }
+                }
+    
+                .third-layer {
+                    @include flexItem(space-between, null, 20px, null);
+    
+                    div {
+                        :nth-child(1) {
+                            font-size: 14px
+                        }
+    
+                        :nth-child(2) {
+                            font-size: 14px
+                        }
+                    }
+                }
+    
+                .fourth-layer {
+                    @include flexItem(space-between, null, 20px, null);
+    
+                    div {
+                        :nth-child(1) {
+                            font-size: 14px
+                        }
+    
+                        :nth-child(2) {
+                            font-size: 14px
+                        }
+                    }
+                }
+            }
+        }
+    
+        .property-third-middle-info {
+            font-size: 14px;
+        }
+    }
+    
+    
+    .property-more-details {    
+        .details {
+            .more-details {
+                :nth-child(1) {
+                    width: 30%;
+                }
+    
+                :nth-child(2) {
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1224px){
+    .details-card {
+        width: 90%;
+    }
+
+    .property-all-info {
+        width: 100%;  
+        @include flexItem(space-between, null, 10px, column);
+        .property-middle-info {
+            width: 100%;
+            @include flexItem(space-between, null, 20px,null);
+            .image {
+                width: 100%;
+                height: 250px;
+            }
+            .property-details {
+                width: 100%; 
+                .second-layer {
+                    @include flexItem(space-between, null, 20px, null);
+                    div {
+                        :nth-child(1) {
+                            font-size: 14px;
+                        }
+    
+                        :nth-child(2) {
+                            font-size: 14px
+                        }
+                    }
+                }
+    
+                .third-layer {
+                    @include flexItem(space-between, null, 20px, null);
+    
+                    div {
+                        :nth-child(1) {
+                            font-size: 14px
+                        }
+    
+                        :nth-child(2) {
+                            font-size: 14px
+                        }
+                    }
+                }
+    
+                .fourth-layer {
+                    @include flexItem(space-between, null, 20px, null);
+    
+                    div {
+                        :nth-child(1) {
+                            font-size: 14px
+                        }
+    
+                        :nth-child(2) {
+                            font-size: 14px
+                        }
+                    }
+                }
+            }
+        }
+    
+        .property-third-middle-info {
+            font-size: 14px;
+        }
+    }
+    
+    
+    .property-more-details {    
+        .details {
+            .more-details {
+                :nth-child(1) {
+                    width: 30%;
+                }
+    
+                :nth-child(2) {
+                    width: 70%;
+                }
+            }
+        }
+    }
+}

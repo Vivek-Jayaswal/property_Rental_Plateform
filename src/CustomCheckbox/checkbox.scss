@@ -1,0 +1,34 @@
+.checkbox-container {
+    width: fit-content;
+    height: fit-content;
+    .checkbox{
+        display: none;
+    }
+    .checkbox-color {
+        width: 100%;
+        background-color: rgb(182, 143, 143);
+        padding: 8px;
+        border-radius: 18px;
+        cursor: pointer;
+    }
+
+    .uncheckbox-color {
+        border: 1px solid rgb(221, 221, 221);
+        color: rgb(120, 120, 120);
+        padding: 8px;
+        border-radius: 15px;
+        cursor: pointer;
+
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .checkbox-container {
+        .checkbox-color {
+            padding: 5px;
+        }
+        .uncheckbox-color {
+            padding: 5px;
+        }
+    }
+}

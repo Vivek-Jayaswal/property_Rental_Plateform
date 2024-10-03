@@ -1,0 +1,14 @@
+@import 'material-icons/iconfont/material-icons.css';
+@import "../App.scss";
+
+.app-container {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.layout {
+    height: calc(100% - 90px);
+    overflow: auto;
+    box-sizing: border-box;
+}

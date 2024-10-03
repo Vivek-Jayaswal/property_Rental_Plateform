@@ -1,0 +1,18 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@mixin flexItem($justify-content,$align-item,$gap,$direction){
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-item;
+    gap: $gap;
+    flex-direction: $direction;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}

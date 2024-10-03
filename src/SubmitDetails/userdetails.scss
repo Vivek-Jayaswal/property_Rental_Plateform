@@ -1,0 +1,248 @@
+@import "../App.scss";
+
+.details-container {
+    width: 100%;
+    height: 100%;
+    @include flexItem(center, null, null, null);
+    box-sizing: border-box;
+    padding: 20px;
+    overflow-y: scroll;
+
+    .form {
+        width: 50%;
+        height: fit-content;
+        border: 1px solid rgb(19, 199, 219);
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        @include flexItem(space-between, flex-start, 20px, column);
+
+        .submit-btn {
+            width: 100%;
+            @include flexItem(flex-end, null, null, null);
+
+            button {
+                border: none;
+                padding: 10px 20px;
+                border-radius: 10px;
+                background-color: rgb(91, 15, 197);
+                cursor: pointer;
+                color: white;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.user-details {
+    width: 100%;
+    @include flexItem(space-between, flex-start, 10px, column);
+
+    .name-number {
+        width: 100%;
+        @include flexItem(space-between, center, null, null);
+
+        div {
+            width: 40%;
+            input {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 5px;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    .address {
+        width: 100%;
+
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+
+.payment-container {
+    @include flexItem(space-between, flex-start, 20px, column);
+
+    .payment-mode {
+        @include flexItem(space-between, flex-start, 20px, column);
+
+        .payment-mode-options {
+            padding-left: 20px;
+
+            div {
+                padding: 10px;
+            }
+
+
+        }
+
+        .debit-card {
+            width: 400px;
+            height: fit-content;
+            margin-left: 20px;
+            @include flexItem(center, center, 10px, column);
+            background: linear-gradient(to right, rgb(14, 14, 232), rgb(238, 7, 7));
+            padding: 10px;
+            border-radius: 10px;
+
+            .card-number {
+                width: 100%;
+
+                input {
+                    width: 100%;
+                    box-sizing: border-box;
+                    border: none;
+                    border-bottom: 1px solid gray;
+                    background-color: transparent;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            .card-details {
+                width: 100%;
+                box-sizing: border-box;
+                @include flexItem(center, center, 10px, null);
+
+                div {
+                    width: 40%;
+                    box-sizing: border-box;
+
+                    label {
+                        font-size: 12px;
+                        width: 100%;
+                    }
+
+                    input {
+                        width: 100%;
+                        box-sizing: border-box;
+                        border: none;
+                        border-bottom: 1px solid gray;
+                        background-color: transparent;
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+
+                .cvv {
+                    width: 20%;
+
+                    div {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+@media only screen and (max-width : 480px) {
+    .details-container {
+        .form {
+            width: 100%;
+        }
+    }
+
+    .user-details {
+        .name-number {
+            @include flexItem(space-between, flex-start, 10px, column);
+
+            div {
+                width: 100%;
+            }
+        }
+    }
+
+    .payment-container {
+        width: 100%;
+        .payment-mode {
+            .debit-card {
+                width: 100%;
+                box-sizing: border-box;
+                margin-left: 0px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width : 481px) and (max-width : 768px){
+    .details-container {
+        .form {
+            width: 100%;
+        }
+    }
+
+    .user-details {
+        .name-number {
+            @include flexItem(space-between, flex-start, 0px, null);
+
+            div {
+                width: 48%;
+            }
+        }
+    }
+
+    .payment-container {
+        width: 100%;
+        .payment-mode {
+            width: 100%;
+            .debit-card {
+                @include flexItem(center, center, 20px, column);
+                width: 70%;
+                box-sizing: border-box;
+                margin-left: 0px;
+            }
+        }
+    }
+}
+@media only screen and (min-width : 768px) and (max-width : 1024px){
+    .details-container {
+        .form {
+            width: 70%;
+            margin: auto;
+        }
+    }
+
+    .user-details {
+        .name-number {
+            @include flexItem(space-between, flex-start, 0px, null);
+
+            div {
+                width: 48%;
+            }
+        }
+    }
+
+    .payment-container {
+        width: 100%;
+        .payment-mode {
+            width: 100%;
+            .debit-card {
+                @include flexItem(center, center, 20px, column);
+                width: 70%;
+                box-sizing: border-box;
+                margin-left: 20px;
+            }
+        }
+    }
+}

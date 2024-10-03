@@ -1,0 +1,544 @@
+@import 'material-icons/iconfont/material-icons.css';
+@import "../App.scss";
+
+.Navbar {
+    width: 100%;
+    height: 90px;
+    @include flexItem(space-between, center, 10px, null);
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.nav-left {
+    width: 20%;
+    @include flexItem(flex-start, center, null, column);
+
+    p {
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        text-shadow: 2px 2px 5px rgb(183, 45, 45);
+        box-sizing: border-box;
+    }
+
+}
+
+.nav-middle {
+    width: 60%;
+    height: 70%;
+    @include flexItem(space-between, center, 10px, null);
+    border: 1px solid rgb(195, 194, 194);
+    padding: 15px;
+    border-radius: 30px;
+    box-sizing: border-box;
+
+    .location-input {
+        input {
+            border: none;
+            height: 30px;
+
+            &:focus {
+                outline: none
+            }
+
+            font-size: 15px
+        }
+
+    }
+
+    .budget-container {
+        position: relative;
+
+        .budget {
+            @include flexItem(space-between, center, 10px, null);
+            cursor: pointer;
+            height: 100%;
+            border-left: 1px solid gray;
+            padding-left: 10px;
+            font-weight: 700;
+
+            .mi-size {
+                font-weight: 900;
+                font-size: 18px;
+            }
+        }
+
+        .select-budget-range {
+            @include flexItem(space-between, null, null, null);
+            width: 200px;
+            height: fit-content;
+            padding: 20px;
+            box-shadow: 0px 0px 15px rgb(187, 187, 187);
+            background-color: white;
+            position: absolute;
+            top: 45px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+
+            .handle-price {
+                @include flexItem(space-between, center, 20px, column);
+            }
+        }
+
+    }
+
+    .search-btn {
+        background-color: #d8232a;
+        border: none;
+        padding: 15px 30px;
+        font-size: 15px;
+        border-radius: 25px;
+        font-weight: 600;
+        color: white;
+        cursor: pointer;
+    }
+
+}
+
+.bedroom-type {
+    // @include flexItem(space-between, null, 30px, null);
+    position: relative;
+
+    .flat-apart {
+        @include flexItem(space-between, center, 10px, null);
+        cursor: pointer;
+        height: 100%;
+        border-left: 1px solid gray;
+        padding-left: 10px;
+        font-weight: 700;
+
+        .mi-size {
+            font-weight: 900;
+            font-size: 18px;
+        }
+    }
+
+    .select-rent-category {
+        @include flexItem(null, flex-start, 30px, column);
+        width: 450px;
+        height: fit-content;
+        padding: 20px;
+        box-shadow: 0px 0px 15px rgb(187, 187, 187);
+        background-color: white;
+        position: absolute;
+        top: 45px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        .select-flat-home-villa {
+            @include flexItem(flex-start, center, 10px, null)
+        }
+
+        .select-number-of-bedroom {
+            width: 100%;
+            @include flexItem(space-between, center, null, null);
+        }
+    }
+
+}
+
+.nav-right {
+    width: 20%;
+    background-color: white;
+    @include flexItem(space-evenly, center, null, null);
+    position: relative;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .total-count {
+        position: absolute;
+        top: 0;
+    }
+}
+
+.ham-menu {
+    display: none;
+    position: relative;
+
+    .ham-nav-right {
+        @include flexItem(space-between, center, 20px, column);
+        width: 50vw;
+        height: 200px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px gray;
+        background-color: rgb(224, 223, 223);
+        position: absolute;
+        top: 50px;
+        right: 0px;
+
+        a {
+            text-decoration: none;
+            transition: all 0.5s ease-out 0s;
+            color: rgb(109, 150, 189);
+
+            &:hover {
+                text-shadow: 0px 0px 16px blueviolet;
+            }
+        }
+    }
+
+    .ham-btn {
+        cursor: pointer;
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .nav-left {
+        display: none;
+    }
+
+    .nav-middle {
+        width: 90%;
+        height: 60%;
+        padding: 10px;
+        @include flexItem(space-between, center, 5px, null);
+
+        .location-input {
+            width: 30%;
+
+            input {
+                width: 100%;
+                height: 20px;
+                font-size: 13px
+            }
+
+        }
+
+        .budget-container {
+            width: 28%;
+
+            .budget {
+                @include flexItem(center, center, 3px, null);
+                padding-left: 3px;
+                font-size: 13px;
+                font-weight: 500;
+
+                .mi-size {
+                    font-size: 13px;
+                    font-weight: 500
+                }
+            }
+
+            .select-budget-range {
+                width: 150px;
+                right: 10px;
+
+                .handle-price {
+                    p {
+                        text-align: center;
+                    }
+
+                    @include flexItem(space-between, center, 20px, column);
+                }
+            }
+
+        }
+
+        .search-btn {
+            width: 20%;
+            padding: 5px;
+            font-size: 13px;
+            border-radius: 15px;
+            font-weight: 500;
+        }
+
+    }
+
+    .bedroom-type {
+        width: 22%;
+
+        .flat-apart {
+            font-size: 13px;
+            @include flexItem(center, center, 3px, null);
+            padding-left: 2px;
+            font-weight: 500;
+
+            .mi-size {
+                font-size: 13px;
+                font-weight: 500;
+            }
+        }
+
+        .select-rent-category {
+            width: fit-content;
+
+            .select-flat-home-villa {
+                @include flexItem(flex-start, center, 20px, null)
+            }
+
+            .select-number-of-bedroom {
+                @include flexItem(space-between, center, 20px, null);
+                flex-wrap: wrap;
+            }
+        }
+
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .ham-menu {
+        width: 10%;
+        display: block;
+
+        .ham-btn {
+            width: 100%;
+            height: 100%;
+            @include flexItem(center, center, null, null)
+        }
+    }
+}
+
+@media only screen and (min-width : 481px) and (max-width : 768px) {
+    .nav-left {
+        width: 15%;
+        height: 70%;
+        box-sizing: border-box;
+        @include flexItem(center, flex-start, null, column);
+
+        p {
+            font-size: 12px;
+            font-weight: 800;
+            text-shadow: 2px 2px 5px rgb(231, 41, 41);
+        }
+
+    }
+
+    .nav-middle {
+        width: 75%;
+        height: 60%;
+        padding: 10px;
+        @include flexItem(space-between, center, 3px, null);
+
+        .location-input {
+            width: 30%;
+
+            input {
+                width: 100%;
+                height: 20px;
+                font-size: 15px
+            }
+
+        }
+
+        .budget-container {
+            width: 25%;
+
+            .budget {
+                @include flexItem(center, center, 0px, null);
+                padding: 3px;
+                font-size: 15px;
+                font-weight: 500;
+
+                .mi-size {
+                    font-size: 15px;
+                    font-weight: 900;
+                }
+            }
+
+            .select-budget-range {
+                @include flexItem(space-between, null, null, null);
+                width: 150px;
+                right: 10px;
+
+                .handle-price {
+                    p {
+                        text-align: center;
+                    }
+
+                    @include flexItem(space-between, center, 20px, column);
+                }
+            }
+
+        }
+
+        .search-btn {
+            width: 20%;
+            padding: 8px;
+            font-size: 13px;
+            border-radius: 15px;
+            font-weight: 700;
+        }
+
+    }
+
+    .bedroom-type {
+        width: 25%;
+
+        .flat-apart {
+            font-size: 15px;
+            @include flexItem(center, center, 3px, null);
+            padding: 3px;
+            font-weight: 500;
+
+            .mi-size {
+                font-size: 15px;
+                font-weight: 900;
+            }
+        }
+
+        .select-rent-category {
+            width: fit-content;
+
+            .select-flat-home-villa {
+                @include flexItem(flex-start, center, 20px, null)
+            }
+
+            .select-number-of-bedroom {
+                width: 100%;
+                @include flexItem(space-between, center, 20px, null);
+                flex-wrap: wrap;
+            }
+        }
+
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .ham-menu {
+        width: 10%;
+        display: block;
+
+        .ham-btn {
+            width: 100%;
+            height: 100%;
+            @include flexItem(center, center, null, null)
+        }
+    }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+    .nav-left {
+        @include flexItem(start, start, null, column);
+
+        p {
+            font-size: 15px;
+            font-weight: 900;
+            text-shadow: 2px 2px 5px rgb(235, 26, 26);
+        }
+    }
+
+    .nav-middle {
+        width: 70%;
+        height: 60%;
+
+        .location-input {
+            input {
+                width: 100%;
+                height: 20px;
+                font-size: 15px;
+                font-weight: 500;
+            }
+        }
+
+        .budget-container {
+            .budget {
+                font-size: 15px;
+                font-weight: 500;
+                .mi-size {
+                    font-weight: 900;
+                    font-size: 15px
+                }
+            }
+        }
+
+        .search-btn {
+            box-sizing: border-box;
+            padding: 8px 20px;
+            font-size: 15px;
+            border-radius: 15px;
+            font-weight: 700;
+        }
+
+    }
+
+    .bedroom-type {
+        .flat-apart {
+            font-size: 15px;
+            font-weight: 500;
+            .mi-size {
+                font-size: 15px;
+                font-weight: 900;
+            }
+        }
+
+        .select-rent-category {
+            width: fit-content;
+
+            .select-flat-home-villa {
+                @include flexItem(flex-start, center, 20px, null)
+            }
+
+            .select-number-of-bedroom {
+                width: 100%;
+                @include flexItem(space-between, center, 20px, null);
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .ham-menu {
+        width: 10%;
+        display: block;
+
+        .ham-btn {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (min-width : 1024px) and (max-width : 1280px) {
+    .nav-left {
+        p {
+            font-size: 15px;
+            font-weight: 900;
+            text-shadow: 2px 2px 5px rgb(235, 26, 26);
+        }
+    }
+
+    .nav-middle {
+        .budget-container {
+            .budget {
+                font-weight: 700;
+
+                .mi-size {
+                    font-weight: 900;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .search-btn {
+            padding: 12px 30px;
+        }
+
+    }
+
+    .bedroom-type {
+        .flat-apart {
+            font-weight: 700;
+
+            .mi-size {
+                font-weight: 900;
+                font-size: 18px;
+            }
+        }
+    }
+}

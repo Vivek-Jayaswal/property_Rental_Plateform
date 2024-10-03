@@ -1,0 +1,353 @@
+@import "../App.scss";
+
+
+.search-card-container {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    padding: 20px;
+    @include flexItem(null, null, 20px, column);
+}
+
+.handle-empty{
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    div{
+        @include flexItem(center, center, 20px, column);
+        p{
+            color: #213b4e;
+        }
+
+        button{
+            border: none;
+            background-color: aqua;
+            padding: 10px 20px; 
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            font-weight: 800;
+        }
+    }
+}
+
+.search-card {
+    width: 80%;
+    height: 250px;
+    margin: auto;
+    @include flexItem(null, null, 10px, null);
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    padding: 10px;
+    box-shadow: 0px 0px 15px rgb(211, 211, 211);
+    border-radius: 10px;
+    border: 1px solid rgb(56, 160, 167);
+
+    .search-card-image {
+        img {
+            width: 300px;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+}
+
+.search-card-details-container {
+    width: calc(100% - 300px);
+    height: 100%;
+    box-sizing: border-box;
+    @include flexItem(space-between, null, null, column);
+
+
+    .search-card-details {
+        height: 70%;
+        @include flexItem(space-evenly, null, 10px, column);
+        border-bottom: 1px solid gray;
+
+        .search-card-title {
+            @include flexItem(space-between, center, null, null);
+            color: #414249;
+        }
+
+        .search-card-facility-container {
+            background-color: rgb(205, 205, 205);
+            padding: 10px;
+            border-radius: 10px;
+            box-sizing: border-box;
+            @include flexItem(space-between, center, null, null);
+
+            .search-card-facility {
+                @include flexItem(null, center, 10px, null);
+
+                .logo {
+                    color: #38495f;
+                }
+
+                .search-facility {
+                    @include flexItem(null, flex-start, 10px, column);
+
+                    :nth-child(1) {
+                        color: #8a8a91;
+                        font-size: 13px;
+                    }
+
+                    :nth-child(2) {
+                        color: #38495f;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+
+        .search-card-description {
+            width: 100%;
+            @include flexItem(space-between, center, null, null);
+
+            :nth-child(1) {
+                color: rgb(88, 88, 88);
+                width: 85%;
+            }
+
+            :nth-child(2) {
+                color: #213b4e;
+                font-weight: 700;
+                width: 15%;
+                text-align: right;
+            }
+        }
+    }
+
+
+    .search-card-btn {
+        width: 100%;
+        padding: 0px 10px;
+        box-sizing: border-box;
+        @include flexItem(space-between, center, null, null);
+
+        .book-btn {
+            border: none;
+            background-color: #ff0808;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all .5s ease-out 0s;
+
+            &:hover {
+                box-shadow: 0px 0px 15px gray;
+            }
+        }
+
+        .view-more-btn {
+            border: none;
+            background-color: transparent;
+            color: rgb(25, 25, 246);
+            font-weight: 600;
+            transition: all 0.5s ease 0s;
+
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+                text-shadow: 0px 0px 30px rgb(255, 80, 80);
+            }
+        }
+    }
+
+}
+
+
+
+@media only screen and (max-width : 480px) {
+    .search-card-container {
+        padding: 10px;
+    }
+
+    .search-card {
+        width: 95%;
+        height: fit-content;
+        @include flexItem(null, null, 10px, column);
+
+        .search-card-image {
+            img {
+                width: 100%;
+                height: 200px;
+            }
+        }
+    }
+
+    .search-card-details-container {
+        width: 100%;
+        height: fit-content;
+        @include flexItem(space-between, null, 20px, column);
+
+        .search-card-details {
+            height: fit-content;
+            @include flexItem(space-evenly, null, 20px, column);
+            padding-bottom: 10px;
+
+            .search-card-facility-container {
+                width: 100%;
+                padding: 5px;
+                @include flexItem(space-between, center, 5px, null);
+
+                .search-card-facility {
+                    @include flexItem(null, center, 5px, null);
+
+                    .logo {
+                        font-size: 17px
+                    }
+
+                    .search-facility {
+                        @include flexItem(null, flex-start, 5px, column);
+                    }
+                }
+            }
+
+            .search-card-description {
+                @include flexItem(null, null, 10px, column);
+
+                :nth-child(1) {
+                    width: 100%;
+                }
+
+                :nth-child(2) {
+                    width: 100%;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width : 480px) and ((max-width : 768px)) {
+    .search-card-container {
+        padding: 10px;
+    }
+
+    .search-card {
+        width: 95%;
+        height: fit-content;
+        @include flexItem(null, null, 10px, column);
+
+        .search-card-image {
+            img {
+                width: 100%;
+                height: 200px;
+            }
+        }
+    }
+
+    .search-card-details-container {
+        width: 100%;
+        height: fit-content;
+        @include flexItem(space-between, null, 20px, column);
+
+        .search-card-details {
+            height: fit-content;
+            @include flexItem(space-evenly, null, 20px, column);
+            padding-bottom: 10px;
+
+            .search-card-facility-container {
+                width: 100%;
+                padding: 5px;
+                @include flexItem(space-between, center, 5px, null);
+
+                .search-card-facility {
+                    @include flexItem(null, center, 5px, null);
+
+                    .logo {
+                        font-size: 17px
+                    }
+
+                    .search-facility {
+                        @include flexItem(null, flex-start, 5px, column);
+                    }
+                }
+            }
+
+            .search-card-description {
+                @include flexItem(null, null, 10px, column);
+
+                :nth-child(1) {
+                    width: 100%;
+                }
+
+                :nth-child(2) {
+                    width: 100%;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width : 769px) and ((max-width : 1024px)) {
+    .search-card-container {
+        padding: 10px;
+    }
+
+    .search-card {
+        width: 95%;
+        height: fit-content;
+        @include flexItem(null, null, 10px, column);
+
+        .search-card-image {
+            img {
+                width: 100%;
+                height: 200px;
+            }
+        }
+    }
+
+    .search-card-details-container {
+        width: 100%;
+        height: fit-content;
+        @include flexItem(space-between, null, 10px, column);
+
+        .search-card-details {
+            height: fit-content;
+            @include flexItem(space-evenly, null, 10px, column);
+            padding-bottom: 10px;
+
+            .search-card-facility-container {
+                width: 100%;
+                padding: 5px;
+                @include flexItem(space-between, center, 5px, null);
+
+                .search-card-facility {
+                    @include flexItem(null, center, 5px, null);
+
+                    .logo {
+                        font-size: 17px
+                    }
+
+                    .search-facility {
+                        @include flexItem(null, flex-start, 5px, column);
+                    }
+                }
+            }
+
+            .search-card-description {
+                @include flexItem(space-between, center, 10px, null);
+                :nth-child(1) {
+                    width: 80%;
+                }
+
+                :nth-child(2) {
+                    width: 20%;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width : 1025px) and ((max-width : 1224px)) {
+    .search-card {
+        width: 85%;
+    }
+    
+}
