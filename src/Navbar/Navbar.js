@@ -108,6 +108,8 @@ const Navbar = () => {
                                     <CustomCheckBox lable={"4BHK"} id={"4BHK"} isChecked={selectedBHK.includes("4BHK")} onChange={() => handleBHKChange("4BHK")} />
                                     <CustomCheckBox lable={"5BHK"} id={"5BHK"} isChecked={selectedBHK.includes("5BHK")} onChange={() => handleBHKChange("5BHK")} />
                                     <CustomCheckBox lable={"5BHK++"} id={"5BHK++"} isChecked={selectedBHK.includes("5BHK++")} onChange={() => handleBHKChange("5BHK++")} />
+                                    <CustomCheckBox lable={"5BHK++"} id={"5BHK++"} isChecked={selectedBHK.includes("5BHK++")} onChange={() => handleBHKChange("5BHK++")} />
+                                    <CustomCheckBox lable={"5BHK++"} id={"5BHK++"} isChecked={selectedBHK.includes("5BHK++")} onChange={() => handleBHKChange("5BHK++")} />
                                 </div>
                             </div>)
                     }
